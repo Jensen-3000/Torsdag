@@ -4,6 +4,8 @@ namespace Torsdag;
 
 public class Animal : IPerson
 {
+    public string Name { get; set; }
+
     public void Create()
     {
         Console.WriteLine("This is an Animal");
