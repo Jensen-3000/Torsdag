@@ -54,3 +54,12 @@ void SetAndDisplayPerson()
     Console.WriteLine(person);
 }
 #endregion
+
+
+DisplaySeparator();
+
+string[] people = { "John Doe", "Jane Doe", "Frank Smith" };
+Console.WriteLine(people[1]);
+
+people = new string[] { "Green", "Yellow", "Red" };
+Console.WriteLine(people[1]);
