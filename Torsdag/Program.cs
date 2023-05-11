@@ -61,5 +61,17 @@ DisplaySeparator();
 string[] people = { "John Doe", "Jane Doe", "Frank Smith" };
 Console.WriteLine(people[1]);
 
+foreach (var item1 in people)
+{
+    Console.Write($"{item1}");
+}
+
+DisplaySeparator();
+
 people = new string[] { "Green", "Yellow", "Red" };
 Console.WriteLine(people[1]);
+
+foreach (var item2 in people)
+{
+    Console.WriteLine(string.Join(", ", item2));
+}
