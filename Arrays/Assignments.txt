@@ -1,0 +1,39 @@
+﻿Assignment 1: Array Initialization and Iteration
+	1. Declare and initialize an array of integers with the numbers 1 to 10.
+	2. Write a for loop to iterate over the array and print each element to the console.
+
+
+Assignment 2: Array Reversal
+	1. Create an array of integers with at least five elements.
+	2. Write a method that takes an array as its parameter and returns a new array that is the reverse of the input array.
+	3. Print the reversed array to the console.
+
+
+Assignment 3: Find the Maximum and Minimum
+	1. Create an array of at least ten integers.
+	2. Write a method that takes an array as its parameter and returns the smallest and largest numbers in the array.
+	3. Print the smallest and largest numbers to the console.
+
+
+Assignment 4: Array Average
+	1. Create an array of floating point numbers.
+	2. Write a method that takes an array as its parameter and calculates and returns the average of the array's elements.
+	3. Print the calculated average to the console.
+
+
+Assignment 5: Sorting an Array
+	1. Create an array of at least ten integers.
+	2. Write a method that takes an array as its parameter and sorts the array in ascending order. Try to implement your own sorting algorithm like bubble sort or selection sort, don't use built-in sorting methods.
+	3. Print the sorted array to the console.
+
+
+Assignment 6: Duplicate Elements
+	1. Create an array of integers which includes some duplicates.
+	2. Write a method that takes an array as its parameter and returns a new array with the duplicates removed.
+	3. Print the new array to the console.
+
+
+Assignment 7: Merge Two Arrays
+	1. Create two arrays of integers.
+	2. Write a method that takes two arrays as its parameters and returns a new array that is the result of appending the second array to the end of the first array.
+	3. Print the new array to the console.
