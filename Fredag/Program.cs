@@ -40,3 +40,24 @@ void DisplayFindAnimalsNamedSorenLINQ()
 DisplayFindAnimalsNamedSorenLINQ();
 
 DisplaySeparator();
+
+
+// LINQ (Language INtergrated Query) - SQL
+// FirstOrDefault()
+// Where()
+// Max()
+// Count()
+// if you have to much time... Select(new //anonymous), Include()
+
+// Collection.LINQ_Method(() => if sætning)
+
+//var temp = animalList.FirstOrDefault<Animal>((kaffe) => kaffe.Id == 1);
+
+//var temp = animalList.
+//FirstOrDefault<Animal>(
+//(kaffe) =>
+//(kaffe.Id == 1) || (kaffe.Name == "Bo"));
+
+// var temp = animalList.Where(
+// (katte)=>
+// (katte.Id == 3 || katte.Name == "Hansi")

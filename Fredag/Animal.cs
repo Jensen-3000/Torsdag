@@ -56,7 +56,7 @@ internal class Animal : IPerson
 
     public override string ToString()
     {
-        //return string.Join(", ", Id, Name, Age, Color);
+        //return string.Join("| ", Id, Name, Age, Color);
         return string.Join("\n", $"Id: {Id}\n- Name: {Name} \n- Age: {Age} \n- Color: {Color}");
     }
 }
