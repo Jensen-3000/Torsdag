@@ -1,4 +1,5 @@
 ﻿using Arrays;
+using System.Runtime.InteropServices;
 
 
 void DisplaySeparator()
@@ -31,4 +32,12 @@ Console.WriteLine("Assignment 3: Find the Maximum and Minimum...\n");
 Assignment3 assignment3 = new Assignment3();
 
 assignment3.MinMax();
+#endregion
+
+#region Assignment 4
+DisplaySeparator();
+Console.WriteLine("Assignment 4: Array Average");
+Assignment4 assignment4 = new Assignment4();
+
+assignment4.DisplayFloats();
 #endregion
