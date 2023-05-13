@@ -1,45 +1,141 @@
 ﻿using Fredag;
+using Fredag.Count;
+using Fredag.FirstOrDefault;
+using Fredag.MinMax;
+using Fredag.Select;
 
 void DisplaySeparator()
 {
     Console.WriteLine(new string('-', 40));
 }
 
-#region start
+void DisplayTextWithColor(string text)
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine(text);
+    Console.ResetColor();
+}
+
+void DisplayAnimalsUsingIEnumAnimal(IEnumerable<Animal> animals, string text)
+{
+    DisplayTextWithColor(text);
+    foreach (Animal animal in animals)
+    {
+        Console.WriteLine($"  {animal}");
+    }
+}
+
+void DisplayAnimalsUsingIEnumString(IEnumerable<string> animals, string text)
+{
+    DisplayTextWithColor(text);
+    foreach (string animal in animals)
+    {
+        Console.WriteLine($"  {animal}");
+    }
+}
+
+
+void DisplaySingleAnimal(Animal animal, string text)
+{
+    DisplayTextWithColor(text);
+    Console.WriteLine($"  {animal}");
+}
+
+void DisplayInt(int animal, string text)
+{
+    DisplayTextWithColor(text);
+    Console.WriteLine($"  {animal}");
+}
+
+
 Animal animal = new Animal();
 List<Animal> animalList = animal.AnimalListMethod();
-#endregion
 
-#region Find Animal color
+// Find Animal color
+DisplayTextWithColor("Find animal whose color is blue. Not using returns.");
 animal.FindAnimalBlueColor(animalList);
-#endregion
 
 DisplaySeparator();
 
-#region Find Animal named Søren
+// Find Animal named Søren
 void DisplayFindAnimalNamedSoren()
 {
+    DisplayTextWithColor("Find animals named Søren using if's");
     List<Animal> animalsNamedSoren = animal.FindNameAndAddToList(animalList);
     foreach (Animal animal in animalsNamedSoren)
     {
-        Console.WriteLine(animal);
+        Console.WriteLine($"  {animal}");
     }
 }
+
 DisplayFindAnimalNamedSoren();
-#endregion
 
 DisplaySeparator();
 
 void DisplayFindAnimalsNamedSorenLINQ()
 {
+    DisplayTextWithColor("Find animals named Søren using LINQ");
     foreach (Animal animal in animal.FindNameAndAddToListLINQ(animalList))
     {
-        Console.WriteLine(animal);
+        Console.WriteLine($"  {animal}");
     }
 }
 DisplayFindAnimalsNamedSorenLINQ();
 
 DisplaySeparator();
+
+
+void DisplayFindAnimalsAboveage50LINQ()
+{
+    DisplayTextWithColor("Find animals above age 50");
+    foreach (Animal animal in animal.FindAnimalsAboveAge50LINQ(animalList))
+    {
+        Console.WriteLine($"  {animal}");
+    }
+}
+DisplayFindAnimalsAboveage50LINQ();
+
+DisplaySeparator();
+
+
+MinLINQ minLINQ = new MinLINQ();
+
+void DisplayFindMinAnimalAge()
+{
+    DisplayTextWithColor("Find Minimum age from a list of animals");
+    foreach (Animal animal in minLINQ.FindMinAnimalAge(animalList))
+    {
+        Console.WriteLine($"  {animal}");
+    }
+}
+
+DisplayFindMinAnimalAge();
+DisplaySeparator();
+
+
+
+
+MaxLINQ maxLINQ = new MaxLINQ();
+DisplayAnimalsUsingIEnumAnimal(maxLINQ.FindOldestAnimalFromList(animalList), "Find Maximum age from a list of animals");
+DisplaySeparator();
+
+
+FirstOrDefaultLINQ firstOrDefaultLINQ = new FirstOrDefaultLINQ();
+string searchedName = "Gert";
+DisplaySingleAnimal(firstOrDefaultLINQ.FindFirstAnimalNamed(animalList, searchedName), $"Finds the first animal named {searchedName}");
+searchedName = "Søren";
+DisplaySingleAnimal(firstOrDefaultLINQ.FindFirstAnimalNamed(animalList, searchedName), $"Finds the first animal named {searchedName}");
+DisplaySeparator();
+
+CountLINQ countLINQ = new CountLINQ();
+DisplayInt(countLINQ.CountAnimalsInList(animalList), "Counts the number of animals in the list: animalList");
+DisplayInt(countLINQ.CountAnimalsInList(animal.FindAnimalsAboveAge50LINQ(animalList)), "Counts the number of animals in the list: FindAnimalsAboveAge50LINQ");
+DisplaySeparator();
+
+SelectLINQ selectLINQ = new();
+DisplayAnimalsUsingIEnumString(selectLINQ.SelectAnimalColors(animalList), "Selects all colors from the list");
+DisplaySeparator();
+
 
 
 // LINQ (Language INtergrated Query) - SQL
