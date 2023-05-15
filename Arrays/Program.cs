@@ -1,5 +1,4 @@
 ﻿using Arrays;
-using System.Runtime.InteropServices;
 
 
 void DisplaySeparator()

@@ -72,6 +72,7 @@ DisplayFindAnimalNamedSoren();
 
 DisplaySeparator();
 
+// Find Animal named Søren, hardcoded
 void DisplayFindAnimalsNamedSorenLINQ()
 {
     DisplayTextWithColor("Find animals named Søren using LINQ");
@@ -84,7 +85,7 @@ DisplayFindAnimalsNamedSorenLINQ();
 
 DisplaySeparator();
 
-
+// Find animals above 50, hardcoded
 void DisplayFindAnimalsAboveage50LINQ()
 {
     DisplayTextWithColor("Find animals above age 50");
@@ -99,7 +100,7 @@ DisplaySeparator();
 
 
 MinLINQ minLINQ = new MinLINQ();
-
+// Find minimum age from the list of animals
 void DisplayFindMinAnimalAge()
 {
     DisplayTextWithColor("Find Minimum age from a list of animals");
@@ -114,12 +115,12 @@ DisplaySeparator();
 
 
 
-
+// Find max age from the list of animals
 MaxLINQ maxLINQ = new MaxLINQ();
 DisplayAnimalsUsingIEnumAnimal(maxLINQ.FindOldestAnimalFromList(animalList), "Find Maximum age from a list of animals");
 DisplaySeparator();
 
-
+// Finds and returns the first animal, passed into the parameter
 FirstOrDefaultLINQ firstOrDefaultLINQ = new FirstOrDefaultLINQ();
 string searchedName = "Gert";
 DisplaySingleAnimal(firstOrDefaultLINQ.FindFirstAnimalNamed(animalList, searchedName), $"Finds the first animal named {searchedName}");
@@ -127,17 +128,19 @@ searchedName = "Søren";
 DisplaySingleAnimal(firstOrDefaultLINQ.FindFirstAnimalNamed(animalList, searchedName), $"Finds the first animal named {searchedName}");
 DisplaySeparator();
 
+// Counts the amount of animals in a list
 CountLINQ countLINQ = new CountLINQ();
 DisplayInt(countLINQ.CountAnimalsInList(animalList), "Counts the number of animals in the list: animalList");
 DisplayInt(countLINQ.CountAnimalsInList(animal.FindAnimalsAboveAge50LINQ(animalList)), "Counts the number of animals in the list: FindAnimalsAboveAge50LINQ");
 DisplaySeparator();
 
+// Only Selects all colors and displays them
 SelectLINQ selectLINQ = new();
 DisplayAnimalsUsingIEnumString(selectLINQ.SelectAnimalColors(animalList), "Selects all colors from the list");
 DisplaySeparator();
 
 
-
+// Lærer shenanigans
 // LINQ (Language INtergrated Query) - SQL
 // FirstOrDefault()
 // Where()
