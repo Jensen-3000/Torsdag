@@ -5,9 +5,15 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Torsdag", "Torsdag\Torsdag.csproj", "{372D5B5E-998D-483C-B9B6-2B2F985C5829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{C7C413A4-5140-4105-8E3A-B2E54C61DDF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csproj", "{C7C413A4-5140-4105-8E3A-B2E54C61DDF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fredag", "Fredag\Fredag.csproj", "{16A40559-A6B7-4141-BBA4-479A910BD6EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fredag", "Fredag\Fredag.csproj", "{16A40559-A6B7-4141-BBA4-479A910BD6EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandag", "Mandag\Mandag.csproj", "{3224AA5C-8B6A-4E1D-AF96-AEBE9228E460}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Første Uge", "Første Uge", "{A233AF70-4F5D-4183-8C83-2312EB7FCD7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Anden Uge", "Anden Uge", "{88C2FCF6-5005-43BE-B653-865E14188284}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +33,18 @@ Global
 		{16A40559-A6B7-4141-BBA4-479A910BD6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16A40559-A6B7-4141-BBA4-479A910BD6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16A40559-A6B7-4141-BBA4-479A910BD6EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3224AA5C-8B6A-4E1D-AF96-AEBE9228E460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3224AA5C-8B6A-4E1D-AF96-AEBE9228E460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3224AA5C-8B6A-4E1D-AF96-AEBE9228E460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3224AA5C-8B6A-4E1D-AF96-AEBE9228E460}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{372D5B5E-998D-483C-B9B6-2B2F985C5829} = {A233AF70-4F5D-4183-8C83-2312EB7FCD7C}
+		{16A40559-A6B7-4141-BBA4-479A910BD6EE} = {A233AF70-4F5D-4183-8C83-2312EB7FCD7C}
+		{3224AA5C-8B6A-4E1D-AF96-AEBE9228E460} = {88C2FCF6-5005-43BE-B653-865E14188284}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E52639B6-BEA9-40D8-91D1-3B74D1C36406}
