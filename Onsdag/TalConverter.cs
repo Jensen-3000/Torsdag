@@ -32,4 +32,19 @@ internal class TalConverter
         }
         return decimalStr;
     }
+
+    public string GetBinaryString()
+    {
+        int temp = Number;
+        string binaryStr = "";
+
+        while (temp > 0)
+        {
+            int rest = temp % 2;
+            char ch = (char)(rest + 0x30);
+            binaryStr = ch + binaryStr;
+            temp /= 2;
+        }
+        return binaryStr;
+    }
 }

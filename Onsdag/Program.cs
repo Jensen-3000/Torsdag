@@ -39,10 +39,15 @@ int talI = (int)talD;
 
 TalConverter converter = new TalConverter();
 
-converter.SetInt(7913);
+//converter.SetInt(7913);
+converter.SetInt(255);
 
 Console.WriteLine(converter.GetInt());
 
-string decimalString = converter.GetDecimalString();
+string decimalStr = converter.GetDecimalString();
 
-Console.WriteLine(decimalString);
+Console.WriteLine(decimalStr);
+
+string binaryStr = converter.GetBinaryString();
+
+Console.WriteLine(binaryStr);
