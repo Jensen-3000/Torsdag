@@ -47,4 +47,75 @@ internal class TalConverter
         }
         return binaryStr;
     }
+
+    public string GetHexString()
+    {
+        int temp = Number;
+        string hexStr = "";
+
+        while (temp > 0)
+        {
+            int rest = temp % 16;
+            char ch;
+            if (rest < 10)
+            {
+                ch = (char)(rest + 0x30); // Hex 0x30 = 48 
+            }
+            else
+            {
+                ch = (char)(rest + 0x37); // 0x37 = 55
+            }
+
+            hexStr = ch + hexStr;
+            temp /= 16;
+        }
+        return hexStr;
+    }
+
+
+    public void SetDecimalString(string str)
+    {
+        int temp = 0;
+
+        foreach (char ch in str)
+        {
+            int intchar = ch - 0x30;
+            temp = temp * 10 + intchar;
+        }
+
+        Number = temp;
+    }
+
+    public void SetBinaryString(string str)
+    {
+        int temp = 0;
+
+        foreach (char ch in str)
+        {
+            int intchar = ch - 0x30;
+            temp = temp * 2 + intchar;
+        }
+
+        Number = temp;
+    }
+
+    public void SetHexString(string str)
+    {
+        int temp = 0;
+        int intchar = 0;
+        foreach (char ch in str)
+        {
+            if (ch >= '0' || ch <= '9')
+            {
+                intchar = ch - 0x30;
+            }
+            if (ch >= 'A' || ch <= 'F')
+            {
+                intchar = ch - 0x37;
+            }
+            temp = temp * 16 + intchar;
+        }
+
+        Number = temp;
+    }
 }

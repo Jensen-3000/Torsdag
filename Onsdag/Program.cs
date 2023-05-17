@@ -45,9 +45,20 @@ converter.SetInt(255);
 Console.WriteLine(converter.GetInt());
 
 string decimalStr = converter.GetDecimalString();
-
 Console.WriteLine(decimalStr);
 
 string binaryStr = converter.GetBinaryString();
-
 Console.WriteLine(binaryStr);
+
+string hexStr = converter.GetHexString();
+Console.WriteLine(hexStr);
+
+converter.SetDecimalString("32");
+Console.WriteLine(converter.GetInt());
+
+converter.SetBinaryString("1111");
+Console.WriteLine(converter.GetInt());
+
+converter.SetHexString("FF");
+Console.WriteLine(converter.GetInt());
+Console.WriteLine($"{converter.GetBinaryString()}, {converter.GetDecimalString()}, {converter.GetHexString()}");
