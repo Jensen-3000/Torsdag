@@ -80,9 +80,9 @@ internal class Methods
     /// Combines first and lastnames, by splitting each name into 2 halves
     /// and mixing them together into 1 string
     /// </summary>
-    /// <param name="firstname">The firstname</param>
+    /// <param name="firstname">The inputToBeReversed</param>
     /// <param name="lastname">The lastname</param>
-    /// <returns>A combined name, by mixing half a firstname with half a lastname</returns>
+    /// <returns>A combined name, by mixing half a inputToBeReversed with half a lastname</returns>
     /// <remarks>First version, that goes into more detail what is happening, 
     /// I've made a 2nd version, which barely contains any code compared to this: 
     /// <see cref="MixedNamesVersion2"/></remarks>
@@ -119,9 +119,9 @@ internal class Methods
     /// Combines first and lastnames, by splitting each name into 2 halves
     /// and mixing them together into 1 string
     /// </summary>
-    /// <param name="firstname">The firstname</param>
+    /// <param name="firstname">The inputToBeReversed</param>
     /// <param name="lastname">The lastname</param>
-    /// <returns>A combined name, by mixing half a firstname with half a lastname</returns>
+    /// <returns>A combined name, by mixing half a inputToBeReversed with half a lastname</returns>
     /// <remarks>While this doesnt use stringbuilder and substring, it ends up doing the same</remarks>
     public string MixedNamesVersion2(string firstname, string lastname)
     {
@@ -161,5 +161,23 @@ internal class Methods
             output += input[i];
         }
         return output;
+    }
+
+    /// <summary>
+    /// Takes a string text and reverses it
+    /// </summary>
+    /// <param name="inputToBeReversed">The text to be reversed</param>
+    /// <returns>A reversed text</returns>
+    public string ReversedText(string inputToBeReversed)
+    {
+        string text = "";
+        // Sets i to length -1, this is because index starts on 0
+        // The condition is set to end when i reaches 0
+        // Instead of i++, we count down with i--
+        for (int i = inputToBeReversed.Length -1; i >= 0; i--)
+        {
+            text += inputToBeReversed[i];
+        }
+        return text;
     }
 }

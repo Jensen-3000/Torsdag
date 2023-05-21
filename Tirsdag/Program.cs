@@ -68,3 +68,7 @@ int numCharReturnedAfterStartPos = 7;
 helper.DisplaySeparator("Separate String");
 string separatedString = methods.SeparateString(input, startPosition, numCharReturnedAfterStartPos);
 Console.WriteLine(separatedString);
+
+helper.DisplaySeparator("Mirror text");
+string mirrorName = methods.ReversedText("John");
+Console.WriteLine(mirrorName);
