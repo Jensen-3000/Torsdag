@@ -59,3 +59,12 @@ string mixedNames = methods.MixedNamesVersion1("Bo", "Hansen");
 Console.WriteLine(mixedNames);
 mixedNames = methods.MixedNamesVersion2("Bo", "Hansen");
 Console.WriteLine(mixedNames);
+
+
+string input = "A small text";
+int startPosition = 4;
+int numCharReturnedAfterStartPos = 7;
+
+helper.DisplaySeparator("Separate String");
+string separatedString = methods.SeparateString(input, startPosition, numCharReturnedAfterStartPos);
+Console.WriteLine(separatedString);

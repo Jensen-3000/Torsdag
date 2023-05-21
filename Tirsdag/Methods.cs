@@ -136,4 +136,30 @@ internal class Methods
                firstname[firstnameMidIndex..] +
                lastname[lastnameMidIndex..];
     }
+
+    /// <summary>
+    /// Separates characters from a string, based on a specified starting position
+    /// and amount of characters that needs to be returned
+    /// </summary>
+    /// <param name="input">Input string which characters need to be separated</param>
+    /// <param name="startPosition">Starting position of the input string</param>
+    /// <param name="numCharReturnedAfterStartPos">Number of characters to be returned after the start position</param>
+    /// <returns>A string of separated characters</returns>
+    public string SeparateString(string input, int startPosition, int numCharReturnedAfterStartPos)
+    {
+        string output = "";
+        // i is set to where in the string we start
+        // and continue as long as the condition, i is less than startPos + numChar
+        // i++ increment i by 1 for each loop
+        for (int i = startPosition; i < startPosition + numCharReturnedAfterStartPos; i++)
+        {
+            // Stops the loop if we reach the end of string input
+            if (i >= input.Length)
+                break;
+
+            // for each loop, 1 character is added to the string output
+            output += input[i];
+        }
+        return output;
+    }
 }
