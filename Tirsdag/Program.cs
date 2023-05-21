@@ -54,3 +54,8 @@ methods.ReadOverloadFirstAndLastName(database);
 helper.DisplaySeparator("Read overload med age");
 methods.ReadOverloadAge(database);
 
+helper.DisplaySeparator("Mixed names");
+string mixedNames = methods.MixedNamesVersion1("Bo", "Hansen");
+Console.WriteLine(mixedNames);
+mixedNames = methods.MixedNamesVersion2("Bo", "Hansen");
+Console.WriteLine(mixedNames);

@@ -1,4 +1,6 @@
-﻿namespace Tirsdag;
+﻿using System.Text;
+
+namespace Tirsdag;
 
 internal class Methods
 {
@@ -72,5 +74,66 @@ internal class Methods
             Console.WriteLine(animal);
         else
             Console.WriteLine($"Kunne ikke finde animal med alder: {age}...");
+    }
+
+    /// <summary>
+    /// Combines first and lastnames, by splitting each name into 2 halves
+    /// and mixing them together into 1 string
+    /// </summary>
+    /// <param name="firstname">The firstname</param>
+    /// <param name="lastname">The lastname</param>
+    /// <returns>A combined name, by mixing half a firstname with half a lastname</returns>
+    /// <remarks>First version, that goes into more detail what is happening, 
+    /// I've made a 2nd version, which barely contains any code compared to this: 
+    /// <see cref="MixedNamesVersion2"/></remarks>
+    public string MixedNamesVersion1(string firstname, string lastname)
+    {
+        // Finds the midwaypoint of the names by dividing by 2
+        int firstnameMidIndex = firstname.Length / 2;
+        int lastnameMidIndex = lastname.Length / 2;
+
+        // Uses substring and sets the startindex to 0
+        // and its length to the midwaypoint of the names
+        string firstnameFirstHalf = firstname.Substring(0, firstnameMidIndex);
+        string firstnameSecondHalf = firstname.Substring(firstnameMidIndex);
+
+        string lastnameFirstHalf = lastname.Substring(0, lastnameMidIndex);
+        string lastnameSecondHalf = lastname.Substring(lastnameMidIndex);
+
+        // Use stringbuilder to append the parts of the names to a string.
+        // Using stringbuilder doesnt create a new string for each time we append
+        // as it is mutable aka can be changed after being instantiated
+        StringBuilder mixedName = new();
+
+        mixedName.Append(firstnameFirstHalf);
+        mixedName.Append(lastnameFirstHalf);
+        mixedName.Append(firstnameSecondHalf);
+        mixedName.Append(lastnameSecondHalf);
+
+        // Gotta tostring as we're returning a string (public string ...)
+        // and not the stringbuilder
+        return mixedName.ToString();
+    }
+
+    /// <summary>
+    /// Combines first and lastnames, by splitting each name into 2 halves
+    /// and mixing them together into 1 string
+    /// </summary>
+    /// <param name="firstname">The firstname</param>
+    /// <param name="lastname">The lastname</param>
+    /// <returns>A combined name, by mixing half a firstname with half a lastname</returns>
+    /// <remarks>While this doesnt use stringbuilder and substring, it ends up doing the same</remarks>
+    public string MixedNamesVersion2(string firstname, string lastname)
+    {
+        // Finds the midwaypoint of the names by dividing by 2
+        int firstnameMidIndex = firstname.Length / 2;
+        int lastnameMidIndex = lastname.Length / 2;
+
+        // Uses range instead of substring. 
+        // VS suggested this, so we learned something new today \o/
+        return firstname[..firstnameMidIndex] +
+               lastname[..lastnameMidIndex] +
+               firstname[firstnameMidIndex..] +
+               lastname[lastnameMidIndex..];
     }
 }
