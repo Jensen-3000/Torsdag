@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fredag\Week1Fredag.csproj" />
+    <ProjectReference Include="..\Logic\Logic.csproj" />
+    <ProjectReference Include="..\Mandag\Week2Mandag.csproj" />
+    <ProjectReference Include="..\Onsdag\Week2Onsdag.csproj" />
+    <ProjectReference Include="..\Reflection\Week3Reflection.csproj" />
+    <ProjectReference Include="..\Tirsdag\Week2Tirsdag.csproj" />
+    <ProjectReference Include="..\Torsdag\Week1Torsdag.csproj" />
+  </ItemGroup>
+
+</Project>

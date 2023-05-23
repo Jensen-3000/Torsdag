@@ -1,0 +1,57 @@
+﻿USE master;
+GO
+
+
+CREATE DATABASE H1Db;
+GO
+
+
+USE H1Db;
+GO
+
+--
+-- Tables
+--
+CREATE TABLE [dbo].[people] (
+    [id] INT IDENTITY (1, 1) NOT NULL,
+    [firstname] NVARCHAR (40) NULL,
+    [lastname] NVARCHAR (40) NULL,
+    [age] INT NULL
+);
+GO
+
+-- Create "Car" table
+CREATE TABLE [dbo].[Car] (
+    [Id] INT IDENTITY (1, 1) NOT NULL,
+    [Model] NVARCHAR (40) NULL,
+    [Make] NVARCHAR (40) NULL
+);
+GO
+
+-- Create "animal" table
+CREATE TABLE [dbo].[animal] (
+    [id] INT IDENTITY (1, 1) NOT NULL,
+    [color] NVARCHAR (40) NULL,
+    [firstname] NVARCHAR (40) NULL,
+    [lastname] NVARCHAR (40) NULL,
+    [age] INT NULL
+);
+GO
+
+--
+-- Insert into
+--
+INSERT INTO [dbo].[people] ([firstname], [lastname], [age])
+VALUES ('John', 'Johnson', 25), ('Frank', 'Smith', 30);
+GO
+
+
+INSERT INTO [dbo].[Car] ([Model], [Make])
+VALUES ('Punto', 'Fiat'), ('Civic', 'Honda');
+GO
+
+
+
+INSERT INTO [dbo].[animal] ([color], [firstname], [lastname], [age])
+VALUES ('Brun', 'Max', 'Vuffelivov', 5), ('Hvid', 'Bella', 'Kattemis', 3);
+GO

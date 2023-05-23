@@ -2,63 +2,70 @@
 
 using Onsdag;
 
-char ch = '0';
+namespace Week2Onsdag;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        char ch = '0';
 
-int chTal = (int)ch;
-// int strTal = (int)"7"
+        int chTal = ch;
+        // int strTal = (int)"7"
 
-double talD = 123.56;
-// Programmøren tager ansvaret fra compileren, ved cast
-// Mister nøjagtighed, mister decimaldel
-int talI = (int)talD;
-
-
-
-//Console.WriteLine($"Karakteren {ch} har værdien {(int)ch}");
-
-// Ascii tree
-//for (int i = 0; i < 256; i++)
-//{
-
-//    // Console.Write($"{(char)i} : {i}");
-//    Console.Write($"{i} : {(char)i} ");
-//    if (i % 16 == 0)
-//    {
-//        Console.WriteLine();
-//    }
-//}
+        double talD = 123.56;
+        // Programmøren tager ansvaret fra compileren, ved cast
+        // Mister nøjagtighed, mister decimaldel
+        int talI = (int)talD;
 
 
-//int tal1 = 7230;
-//int tal2 = tal1 % 10;
-//int tal3 = tal2+0x30;
+
+        //Console.WriteLine($"Karakteren {ch} har værdien {(int)ch}");
+
+        // Ascii tree
+        //for (int i = 0; i < 256; i++)
+        //{
+
+        //    // Console.Write($"{(char)i} : {i}");
+        //    Console.Write($"{i} : {(char)i} ");
+        //    if (i % 16 == 0)
+        //    {
+        //        Console.WriteLine();
+        //    }
+        //}
 
 
-//Console.WriteLine(tal3);
+        //int tal1 = 7230;
+        //int tal2 = tal1 % 10;
+        //int tal3 = tal2+0x30;
 
 
-TalConverter converter = new TalConverter();
+        //Console.WriteLine(tal3);
 
-//converter.SetInt(7913);
-converter.SetInt(255);
 
-Console.WriteLine(converter.GetInt());
+        TalConverter converter = new TalConverter();
 
-string decimalStr = converter.GetDecimalString();
-Console.WriteLine(decimalStr);
+        //converter.SetInt(7913);
+        converter.SetInt(255);
 
-string binaryStr = converter.GetBinaryString();
-Console.WriteLine(binaryStr);
+        Console.WriteLine(converter.GetInt());
 
-string hexStr = converter.GetHexString();
-Console.WriteLine(hexStr);
+        string decimalStr = converter.GetDecimalString();
+        Console.WriteLine(decimalStr);
 
-converter.SetDecimalString("32");
-Console.WriteLine(converter.GetInt());
+        string binaryStr = converter.GetBinaryString();
+        Console.WriteLine(binaryStr);
 
-converter.SetBinaryString("1111");
-Console.WriteLine(converter.GetInt());
+        string hexStr = converter.GetHexString();
+        Console.WriteLine(hexStr);
 
-converter.SetHexString("FF");
-Console.WriteLine(converter.GetInt());
-Console.WriteLine($"{converter.GetBinaryString()}, {converter.GetDecimalString()}, {converter.GetHexString()}");
+        converter.SetDecimalString("32");
+        Console.WriteLine(converter.GetInt());
+
+        converter.SetBinaryString("1111");
+        Console.WriteLine(converter.GetInt());
+
+        converter.SetHexString("FF");
+        Console.WriteLine(converter.GetInt());
+        Console.WriteLine($"{converter.GetBinaryString()}, {converter.GetDecimalString()}, {converter.GetHexString()}");
+    }
+}

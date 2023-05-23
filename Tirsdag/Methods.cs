@@ -8,7 +8,7 @@ internal class Methods
     {
         List<Animal> animalList = new List<Animal>()
         {
-            new Animal { Age = 5, Color = "red", Firstname = "Fluffy", Lastname = "McWigglesworth"},
+            new Animal { Age = 5, Color = "purple", Firstname = "Mr", Lastname = "Bigglesworth"},
             new Animal { Age = 25, Color = "blue", Firstname = "Sir", Lastname = "Pawsalot" },
             new Animal { Age = 25, Color = "yellow", Firstname = "Professor", Lastname = "Quackerton" },
             new Animal { Age = 55, Color = "orange", Firstname = "Duchess", Lastname = "Floofy" },
